@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hospital Dashboard</title>
+    <link rel="stylesheet" href="./hospital.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <div class="brand">Hospital Dashboard</div>
+        <nav>
+          <a href="./index.html">Home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="dashboard-shell">
+      <section class="dashboard-card">
+        <div class="section-heading">
+          <h1>Emergency Requests</h1>
+        </div>
+
+        <p id="hospitalStatus" class="status-message" aria-live="polite"></p>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Driver Name</th>
+                <th>Ambulance Number</th>
+                <th>Patient Name</th>
+                <th>Current Location</th>
+                <th>Hospital</th>
+                <th>Emergency Level</th>
+                <th>Time</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="requestTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="./hospital.js"></script>
+  </body>
+</html>

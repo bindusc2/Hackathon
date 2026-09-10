@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Ambulance Clearance System</title>
+    <link rel="stylesheet" href="./driver.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="container nav-wrap">
+        <div class="brand">Emergency Response</div>
+        <nav>
+          <a href="./index.html">Home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="form-card">
+        <h1>Emergency Request</h1>
+
+        <form id="ambulanceRequestForm" novalidate>
+          <div class="field-group">
+            <label for="driverName">Driver Name</label>
+            <input id="driverName" name="driverName" type="text" placeholder="Enter driver name" />
+          </div>
+
+          <div class="field-group">
+            <label for="ambulanceNo">Ambulance Number</label>
+            <input id="ambulanceNo" name="ambulanceNo" type="text" placeholder="Enter ambulance number" />
+          </div>
+
+          <div class="field-group">
+            <label for="patientName">Patient Name</label>
+            <input id="patientName" name="patientName" type="text" placeholder="Enter patient name" />
+          </div>
+
+          <div class="field-group">
+            <label for="source">Current Location</label>
+            <input id="source" name="source" type="text" placeholder="Enter current location" />
+          </div>
+
+          <div class="field-group">
+            <label for="hospital">Hospital Name</label>
+            <input id="hospital" name="hospital" type="text" placeholder="Enter hospital name" />
+          </div>
+
+          <div class="field-group">
+            <label for="emergency">Emergency Level</label>
+            <select id="emergency" name="emergency">
+              <option value="">Select emergency level</option>
+              <option value="Critical">Critical</option>
+              <option value="Serious">Serious</option>
+              <option value="Normal">Normal</option>
+            </select>
+          </div>
+
+          <button id="sendRequestBtn" type="submit" class="primary-btn">Send Emergency Request</button>
+
+          <p id="driverStatus" class="status-message" aria-live="polite"></p>
+        </form>
+      </section>
+    </main>
+
+    <script type="module" src="./driver.js"></script>
+  </body>
+</html>
